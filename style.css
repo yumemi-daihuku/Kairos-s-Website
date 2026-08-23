@@ -1,0 +1,393 @@
+/* リセット・基本設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Hiragino Sans', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+    url('moon.jpe');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* コンテナ */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダー */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #fafafa;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+/* セクション */
+section {
+  margin-bottom: 50px;
+}
+
+/* 見出し */
+h1 {
+  color: #2c3e50;
+  font-size: 36px;
+  border-bottom: 4px solid #3498db;
+  padding-bottom: 15px;
+  margin: 40px 0 20px 0;
+}
+
+h2 {
+  color: #34495e;
+  font-size: 24px;
+  border-left: 8px solid #e74c3c;
+  padding-left: 15px;
+  margin: 30px 0 15px 0;
+}
+
+h3 {
+  color: #7f8c8d;
+  font-size: 18px;
+  margin: 20px 0 10px 0;
+}
+
+/* 段落 */
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* 記事 */
+article {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 8px solid #3498db;
+}
+
+article h3 {
+  color: #2980b9;
+  margin-top: 0;
+  font-size: 20px;
+}
+
+/* リスト */
+ul {
+  margin: 20px 0 20px 30px;
+  list-style-type: disc;
+}
+
+li {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/*デカい大きいテキスト*/
+.bigredtxt{
+  font-size: 200%;
+  color: #ff0000;
+}
+
+/* ポートフォリオリスト（特別なスタイル） */
+.portfolio {
+  background-color: #ecf0f1;
+  padding: 25px 30px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.portfolio li {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio li:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+/* リンク */
+a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.portfolio a:hover {
+  color: #e74c3c;
+}
+
+/* フッター */
+footer {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 0px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;  /* fixedをscrollに変更 */
+  }
+  main {
+    padding: 20px 10px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+}
+
+/* ハンバーガーメニュー */
+.hamburger-toggle {
+  display: none;
+}
+
+.hamburger-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+
+.hamburger-icon span {
+  width: 30px;
+  height: 3px;
+  background-color: #696969;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-toggle:checked ~ .hamburger-icon span:nth-child(1) {
+  transform: rotate(45deg) translateY(14px);
+}
+
+.hamburger-toggle:checked ~ .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-toggle:checked ~ .hamburger-icon span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-14px);
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #2c3e50b2;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.hamburger-toggle:checked ~ .hamburger-menu {
+  transform: translateX(0);
+}
+
+.menu-content {
+  padding: 100px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.menu-content label {
+  display: block;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 15px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-content label:hover {
+  border-left-color: #3498db;
+  padding-left: 25px;
+}
+
+/* ===== ページ切り替え機能（ここが抜けていた） ===== */
+
+/* ページセクション用ラジオボタンを非表示 */
+input[type="radio"][name="page-section"] {
+  display: none;
+}
+
+/* 全てのページコンテンツを初期状態では非表示 */
+.page-content {
+  display: none;
+}
+
+/* ラジオボタンがチェックされたら、対応するコンテンツを表示 */
+#page-home:checked ~ main #content-home,
+#page-websites:checked ~ main #content-websites,
+#page-storage:checked ~ main #content-storage,
+#page-credit:checked ~ main #content-credit {
+  display: block;
+}
+
+.credit-list {
+  margin: 40px 0;
+  border-left: 4px solid #3498db;
+  padding-left: 30px;
+}
+
+.credit-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.credit-item:last-child {
+  border-bottom: none;
+}
+
+.credit-label {
+  color: #7f8c8d;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.credit-value {
+  color: #2980b9;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.credit-form {
+  max-width: 500px;
+  margin: 40px auto;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label:first-of-type {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #34495e;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.shimmer-text {
+  background: linear-gradient(100deg,
+    #fafafa 30%, #2980b9 50%, #fafafa 70%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 3s linear infinite;
+  font-size: 200%;
+}
+@keyframes shimmer {
+  to { background-position: -200% center; }
+}
