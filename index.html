@@ -18,6 +18,7 @@
 		<input type="radio" id="page-websites" name="page-section">
 		<input type="radio" id="page-storage" name="page-section">
 		<input type="radio" id="page-credit" name="page-section">
+		<input type="radio" id="page-music" name="page-section">
 		
 		<!-- ハンバーガーアイコン -->
 		<label for="hamburger-toggle" class="hamburger-icon">
@@ -33,7 +34,9 @@
 				<label for="page-home">ホーム</label>
 				<label for="page-websites">関連サイト</label>
 				<label for="page-storage">雑多置き場</label>
-				<label for="page-credit">クレジット</label> 
+				<label for="page-credit">クレジット</label>
+				<label for="page-music">作った曲</label> 
+
 			</div>
 		</nav>
 
@@ -192,6 +195,37 @@
 
 			</section>
 
+			<section class="page-content" id="content-music">
+				<h1>作曲</h1>
+				<p>ゲーム制作用に作曲した曲や、実験的な作品などを公開しています。</p>
+				
+				<div class="music-playlist">
+					<div class="music-item">
+						<h3>ガランサスの子守歌</h3>
+						<audio controls>
+							<source src="music/garansasu.mp3" type="audio/mpeg">
+							お使いのブラウザは audio タグに対応していません。
+						</audio>
+						<p class="music-desc">ゲームのタイトル画面をイメージした曲。メロディーとコード進行だけの手抜き()。意外と良い曲にはなってると思う。</p>
+					</div>
+					
+					<div class="music-item">
+						<h3>🎵 タイトル2</h3>
+						<audio controls>
+							<source src="music/song2.mp3" type="audio/mpeg">
+						</audio>
+						<p class="music-desc">ここに曲の説明を書く予定。</p>
+					</div>
+					
+					<div class="music-item">
+						<h3>🎵 タイトル3</h3>
+						<audio controls>
+							<source src="music/song3.mp3" type="audio/mpeg">
+						</audio>
+						<p class="music-desc">ここに曲の説明を書く予定。</p>
+					</div>
+				</div>
+			</section>
 
 		</main>
 

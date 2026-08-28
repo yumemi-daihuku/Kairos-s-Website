@@ -196,6 +196,43 @@ footer p {
   }
 }
 
+/* 音楽プレイリスト */
+.music-playlist {
+  margin: 30px 0;
+}
+
+.music-item {
+  background-color: #f9f9f9;
+  border-left: 5px solid #3498db;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.music-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.music-item h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+audio {
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+.music-desc {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
+
 /* ハンバーガーメニュー */
 .hamburger-toggle {
   display: none;
@@ -293,7 +330,8 @@ input[type="radio"][name="page-section"] {
 #page-home:checked ~ main #content-home,
 #page-websites:checked ~ main #content-websites,
 #page-storage:checked ~ main #content-storage,
-#page-credit:checked ~ main #content-credit {
+#page-credit:checked ~ main #content-credit,
+#page-music:checked ~ main #content-music {
   display: block;
 }
 
