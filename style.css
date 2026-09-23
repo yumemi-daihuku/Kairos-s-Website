@@ -331,7 +331,8 @@ input[type="radio"][name="page-section"] {
 #page-websites:checked ~ main #content-websites,
 #page-storage:checked ~ main #content-storage,
 #page-credit:checked ~ main #content-credit,
-#page-music:checked ~ main #content-music {
+#page-music:checked ~ main #content-music,
+#page-novel:checked ~ main #content-novel {
   display: block;
 }
 
@@ -415,6 +416,7 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* キラキラ */
 
 .shimmer-text {
   background: linear-gradient(100deg,
